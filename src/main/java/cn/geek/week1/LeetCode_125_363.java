@@ -1,6 +1,6 @@
 package cn.geek.week1;
 
-import org.apache.commons.lang.StringUtils;
+//import org.apache.commons.lang.StringUtils;
 
 /**
  *
@@ -90,7 +90,8 @@ public class LeetCode_125_363 {
     public boolean isPalindrome(String s) {
 
         // 先全部转小写并且去掉空格
-        String tempStr = StringUtils.trim(s);
+//        String tempStr = StringUtils.trim(s);
+        String tempStr = "";
         tempStr = tempStr.toLowerCase().replaceAll(":", "").replaceAll(",", "").replaceAll(" ", "");
         System.out.println(tempStr);
 
