@@ -8,7 +8,9 @@ public class Test11 {
 
     public static void main(String[] args) {
 
-        //要知道这个类是做什么用的,是怎么找到mysql驱动的,
+        // 设置上下文类加载器为extClassLoader, 会导致加载mysql的class文件时候找不到文件, 导致加载失败, 因为ext不扫描classPath路径
+        Thread.currentThread().setContextClassLoader(Test11.class.getClassLoader().getParent());
+
         ServiceLoader<Driver> loader = ServiceLoader.load(Driver.class);
 
         Iterator<Driver> iterator = loader.iterator();
