@@ -8,7 +8,6 @@ public class Test12 {
     public static void main(String[] args) throws Exception {
 
         /**
-         *    Class<?> caller = Reflection.getCallerClass();
          *    1、通过反射的方式获取到调用者, 这里就是test12的对象, 然后通过caller的类加载器去加载com.mysql.jdbc.Driver
          *    Test12的类加载器是AppClassLoader(应用类加载器)
          *
@@ -21,11 +20,7 @@ public class Test12 {
          *
          *    4、这里面还涉及到了桥接模式,
          *
-         *
          *    类的初始化和实例化的区别？？
-         *
-         *
-         *
          *
          */
         Class.forName("com.mysql.jdbc.Driver");
